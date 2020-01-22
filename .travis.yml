@@ -5,7 +5,9 @@ matrix:
     - node_js: "12"
     - node_js: "10"
       script:
-        - ./node_modules/.bin/grunt && istanbul report text && ( cat coverage/lcov.info | $(npm get prefix)/bin/coveralls || true ) && rm -rf coverage
+        # - ./node_modules/.bin/grunt && istanbul report text && ( cat coverage/lcov.info | $(npm get prefix)/bin/coveralls || true ) && rm -rf coverage
+        - ./node_modules/.bin/grunt && grunt ui-test --browserstack
       before_script:
-        - npm install -g istanbul coveralls
+        # - npm install -g istanbul coveralls
+        - scripts/install-ui-test-dependencies.sh
     - node_js: "8"
