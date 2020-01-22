@@ -303,7 +303,7 @@ exports.config = {
 };
 
 if (process.env.BROWSERSTACK) {
-    exports.config.maxInstances = 1;
+    exports.config.maxInstances = 5;
     if (process.env.BROWSERSTACK_USERNAME && process.env.BROWSERSTACK_ACCESS_KEY) {
         exports.config.user = process.env.BROWSERSTACK_USERNAME;
         exports.config.key = process.env.BROWSERSTACK_ACCESS_KEY;
