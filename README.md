@@ -68,3 +68,8 @@ It was created by [IBM Emerging Technology](https://www.ibm.com/blogs/emerging-t
 ## Copyright and license
 
 Copyright JS Foundation and other contributors, https://openjsf.org under [the Apache 2.0 license](LICENSE).
+
+## UI testing
+As UI testing environment, this project has used [BrowserStack](https://www.browserstack.com/) which supports automated UI testing services on Multi browsers and Multi-OS. As the first step, Google Chrome browsers on Windows and macOS have been tested. In the future, Internet Explorer, Safari and Firefox are supported in this project. Using the service, we can easily detect problems of the UI and create a browser list which this project supported.
+
+<a href='https://www.browserstack.com/'><img src='browserstack.svg' width=490></a>
