@@ -2,12 +2,11 @@ sudo: false
 language: node_js
 matrix:
   include:
-    - node_js: "12"
+    # - node_js: "12"
     - node_js: "10"
       script:
-        # - ./node_modules/.bin/grunt && istanbul report text && ( cat coverage/lcov.info | $(npm get prefix)/bin/coveralls || true ) && rm -rf coverage
-        - ./node_modules/.bin/grunt test-ui --browserstack
-      before_script:
-        # - npm install -g istanbul coveralls
-        - scripts/install-ui-test-dependencies.sh
-    - node_js: "8"
+        #- ./node_modules/.bin/grunt test-ui --browserstack
+        - git clone https://github.com/node-red/node-red.git && cd node-red && npm install && scripts/install-ui-test-dependencies.sh && ./node_modules/.bin/grunt test-ui --browserstack 
+      # before_script:
+        # - scripts/install-ui-test-dependencies.sh
+    # - node_js: "8"
