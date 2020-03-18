@@ -6,7 +6,7 @@ matrix:
     - node_js: "10"
       script:
         #- ./node_modules/.bin/grunt test-ui --browserstack
-       - git clone https://github.com/node-red/node-red.git && cd node-red && sed -i "s/maxInstances = 1;/maxInstances = 5;/" test/editor/wdio.conf.js && sed -i "s/logLevel: 'silent',/logLevel: 'verbose',/" test/editor/wdio.conf.js && npm install && scripts/install-ui-test-dependencies.sh && ./node_modules/.bin/grunt test-ui --browserstack 
+       - git clone https://github.com/node-red/node-red.git && cd node-red && sed -i "s/maxInstances = 1;/maxInstances = 5;/" test/editor/wdio.conf.js && sed -i "s/silent/verbose/" test/editor/wdio.conf.js && npm install && scripts/install-ui-test-dependencies.sh && ./node_modules/.bin/grunt test-ui --browserstack 
       # before_script:
         # - scripts/install-ui-test-dependencies.sh
     # - node_js: "8"
